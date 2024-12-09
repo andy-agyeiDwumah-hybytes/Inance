@@ -1,0 +1,39 @@
+/* FOLLOW US */
+section.infoSection {
+    padding: 75px 0;
+    background-color: var(--darkBlue);
+    text-align: center;
+    color: var(--white);
+}
+
+h4.h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+div.socialBox {
+    margin: 25px auto 0;
+}
+
+div.box {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 15px;
+}
+
+.iconLink {
+    margin: 0 5px;
+    color: var(--blue);
+    &:hover {
+        color: var(--orange);
+    }
+}
+
+.icon {
+    font-size: 18px;
+}
