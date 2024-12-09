@@ -3,10 +3,13 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 // Components
 import Layout from "./components/layout/Layout"
 import Notfound from "./components/notfound/Notfound"
+import About from "./components/about/About"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />} errorElement={<Notfound />}></Route>
+    <Route path="/" element={<Layout />} errorElement={<Notfound />}>
+      <Route path="about" element={<About />} />
+    </Route>
   )
 )
 

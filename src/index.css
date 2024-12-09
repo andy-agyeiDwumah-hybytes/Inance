@@ -17,6 +17,8 @@ html {
   box-sizing: inherit;
 }
 
+/* ALL */
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -26,8 +28,21 @@ main {
   position: relative;
 }
 
-a {
+
+a,
+a:hover,
+a:focus {
   text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.layout_padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 /* HEADER SECTION */
@@ -103,4 +118,128 @@ a {
 .navbar-toggler[aria-expanded="false"] .s-3 {
   -webkit-transform: none;
   transform: none;
+}
+
+/* ABOUT */
+/* Add styles here as it will be used in both 'about' and 'index' pages */
+div.about-row {
+  align-items: center;
+}
+
+h2.about-h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+p.about-para {
+  margin-top: 10px;
+}
+
+a.about-link {
+  margin-top: 15px;
+  display: inline-block;
+  font-family: 'Merriweather Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 2px;
+  color: var(--white);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--blue)
+  }
+}
+
+img.about-img {
+  width: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 992px) {
+  .hero_area {
+    height: auto;
+  }
+
+  .header_section .main_nav {
+    flex: 1;
+  }
+
+  #navbarSupportedContent {
+    margin-top: 15px;
+  }
+
+  .slider_section {
+    padding-top: 45px;
+  }
+
+  .feature_section .feature_container .box {
+    padding: 30px 15px;
+  }
+
+  .feature_section .feature_container .box .img-box {
+    width: 75px;
+  }
+
+  .feature_section {
+    transform: none;
+    padding: 90px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .layout_padding {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .layout_padding-top {
+    padding-top: 90px;
+  }
+
+  .layout_padding-bottom {
+    padding-bottom: 90px;
+  }
+
+  .slider_section .detail-box {
+    padding-bottom: 45px;
+  }
+
+  .feature_section .feature_container {
+    flex-direction: column;
+  }
+
+  .feature_section .feature_container .box {
+    padding: 30px 15px;
+  }
+
+  .feature_section .feature_container .box:not(:nth-last-child(1)) {
+    margin-bottom: 15px;
+  }
+
+  .about-section-detail-box {
+    margin-bottom: 45px;
+  }
+
+  .professional_section .img-box {
+    display: none;
+  }
+
+  .contact_section form {
+    margin-bottom: 45px;
+  }
+
+  /* .info_section .info_items::before {
+    width: 1px;
+    height: 90%;
+    top: 25px;
+  } */
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
 }
