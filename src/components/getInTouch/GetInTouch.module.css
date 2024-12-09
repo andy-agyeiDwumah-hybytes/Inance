@@ -1,3 +1,51 @@
+/* GET IN TOUCH */
+div.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+div.imgBox {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 80px;
+
+    &:hover {
+        background-color: var(--orange);
+    }
+}
+
+.imgIcon {
+    font-size: 24px;
+    color: var(--white);
+}
+
+div.infoItems {
+    position: relative;
+    margin-top: 1.5em;
+}
+
+p.imgIconText {
+    color: var(--white);
+    margin-top: 2em;
+    position: relative;
+    /* Important: ensures line goes behind text */
+    background-color: var(--darkBlue);
+}
+
+/* White line that connects images */
+div.infoItems::before {
+    position: absolute;
+    content: "";
+    background-color: var(--white);
+}
+
 /* FOLLOW US */
 section.infoSection {
     padding: 75px 0;
@@ -36,4 +84,41 @@ div.box {
 
 .icon {
     font-size: 18px;
+}
+
+/* MEDIA QUERIES */
+/* Bootstrap breakpoints */
+@media (width >= 280px) {
+    div.infoItems::before {
+        top: 0;
+        width: 1px;
+        /* Prevent line from showing at the bottom of last text  */
+        height: 92%;
+        /* Rotate line - vertical */
+        rotate: 180deg;
+    }
+
+    /* Increase height of line that connects other image */
+    div[data-content="phone"],
+    div[data-content="mail"] {
+        margin-top: 2em;
+    }
+}
+
+@media (width >= 768px) {
+    div.infoItems::before {
+        top: 28%;
+        width: 75%;
+        height: 1px;
+        /* Bring line back to default - horizontal */
+        rotate: 0deg;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Remove margin */
+    div[data-content="phone"],
+    div[data-content="mail"] {
+        margin-top: 0;
+    }
 }
