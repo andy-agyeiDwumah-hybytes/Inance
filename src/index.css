@@ -2,7 +2,6 @@
   --white: #ffffff;
   --black: #000000;
   --blue: #0355cc;
-  /* --primary2:#e31414; */
   --orange: #ff8a1d;
   --darkBlue: #0a0f43;
   --lightBlue: #d1e3ff;
@@ -29,4 +28,79 @@ main {
 
 a {
   text-decoration: none;
+}
+
+/* HEADER SECTION */
+/* Bootstrap classes */
+.navbar-nav {
+  margin: 0 0 0 auto;
+}
+
+.nav-link {
+  margin: 0 1em 0;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.navbar-toggler {
+  padding: 0;
+  width: 37px;
+  height: 42px;
+  outline: none;
+  border: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/* Remove default box shadow on button */
+.navbar-toggler:focus, .navbar-toggler:focus-visible {
+  box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.navbar-toggler[aria-expanded="true"] span {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] span::before,
+.navbar-toggler[aria-expanded="true"] span::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .s-1 {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: 0;
+  margin-bottom: -4px;
+}
+
+.navbar-toggler[aria-expanded="true"] .s-2 {
+  display: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .s-3 {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0;
+  margin-top: -4px;
+}
+
+.navbar-toggler[aria-expanded="false"] .s-1,
+.navbar-toggler[aria-expanded="false"] .s-2,
+.navbar-toggler[aria-expanded="false"] .s-3 {
+  -webkit-transform: none;
+  transform: none;
 }
