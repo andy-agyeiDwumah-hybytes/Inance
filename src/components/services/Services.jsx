@@ -6,6 +6,8 @@ import electricalImg from "../../assets/s2.png"
 import plumbingImg from "../../assets/s3.png"
 // Styles
 import styles from "./Services.module.css"
+// React
+import { Link } from "react-router";
 
 export default function Services() {
   return (
@@ -29,7 +31,7 @@ export default function Services() {
           </Service>
         </div>
         <div className={styles.btnBox}>
-          <a href="" className={styles.btnBoxLink}>View More</a>
+          <Link to="" className={styles.btnBoxLink}>View More</Link>
         </div>
       </div>
     </section>

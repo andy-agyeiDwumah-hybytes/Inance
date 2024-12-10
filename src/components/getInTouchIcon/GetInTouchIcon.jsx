@@ -1,12 +1,14 @@
 // Fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// React
+import { Link } from "react-router";
 
 export default function GetInTouchIcon({ icon, styles }) {
   return (
     <div>
-      <a href="" className={styles.iconLink}>
+      <Link to="" className={styles.iconLink}>
         <FontAwesomeIcon icon={icon} className={styles.icon} />
-      </a>
+      </Link>
     </div>
   );
 }

@@ -1,9 +1,26 @@
+// React
+import { Link, useLocation } from "react-router";
+import { useEffect, useState } from "react";
 // Images
 import aboutImg from "../../assets/about-img.jpg"
 
 export default function About() {
+  // classname differs depending on the path
+  const { pathname } = useLocation()
+  const [layoutClassName, setLayoutClassName] = useState("")
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setLayoutClassName("layout_padding-bottom")
+    } else if (pathname === "/about") {
+      setLayoutClassName("layout_padding")
+    } else {
+      return
+    }
+  }, [pathname])
+
   return (
-    <section className="layout_padding">
+    <section className={["about_section", layoutClassName].join(" ")}>
       <div className="container">
         <div className="row about-row">
           <div className="col-lg-5 col-md-6">
@@ -17,7 +34,7 @@ export default function About() {
                 suffered alteration in some form, by injected humour, or
                 randomised
               </p>
-              <a href="" className="about-link">Read More</a>
+              <Link to="" className="about-link">Read More</Link>
             </div>
           </div>
           <div className="col-lg-7 col-md-6">

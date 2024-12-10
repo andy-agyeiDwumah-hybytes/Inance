@@ -1,3 +1,4 @@
+// Styles
 import styles from "./Footer.module.css"
 
 export default function Footer() {
@@ -12,6 +13,7 @@ export default function Footer() {
             <p className={styles.text}>
               &copy; <span className={styles.displayDateYear}>{year}</span> All
               Rights Reserved By{" "}
+              {/* Use of standard a link here is because it points to a page outside the app */}
               <a href="https://html.design/">Free Html Templates</a>
             </p>
           </div>

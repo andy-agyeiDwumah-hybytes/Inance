@@ -45,6 +45,10 @@ h2 {
   padding-bottom: 120px;
 }
 
+.layout_padding-bottom {
+  padding-bottom: 120px;
+}
+
 .heading_container {
   display: -webkit-box;
   display: -ms-flexbox;
