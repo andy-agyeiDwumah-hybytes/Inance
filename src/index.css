@@ -230,6 +230,13 @@ img.about-img {
   padding-bottom: 90px;
 }
 
+/* FEATURE SECTION */
+/* Important: styling must go here to allow media query to take affect */
+.feature_section {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 992px) {

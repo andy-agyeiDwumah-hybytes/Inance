@@ -16,7 +16,7 @@ import styles from "./Feature.module.css"
 
 export default function Feature() {
   return (
-    <section className={["feature_section", styles.section].join(" ")}>
+    <section className="feature_section">
       <div className="container">
         <div
           className={["feature_container", styles.featureContainer].join(" ")}
