@@ -87,6 +87,10 @@ h2 {
 }
 
 /* HEADER SECTION */
+.hero_area {
+  position: relative;
+  background-color: #d1e3ff;
+}
 /* Bootstrap classes */
 .header_section .container-fluid {
   padding-inline: 25px;
@@ -199,6 +203,31 @@ a.about-link {
 
 img.about-img {
   width: 100%;
+}
+
+/* SLIDER SECTION */
+.slider_section {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.slider_section .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.slider_section .detail-box {
+  padding-bottom: 90px;
 }
 
 /* MEDIA QUERIES */
