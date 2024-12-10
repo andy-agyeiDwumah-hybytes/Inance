@@ -1,20 +1,19 @@
 div.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-div.top {
     background-color: var(--black);
-    padding: 1.1em 1.2em;
+    padding: 15px 0;
 }
 
-div.top > a {
-    display: inline-block;
-}
+div.contactNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 
-div.top > a {
-    color: var(--white);
+    & > a {
+        color: var(--white);
+    }
 }
 
 div.bottom {

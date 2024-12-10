@@ -88,6 +88,10 @@ h2 {
 
 /* HEADER SECTION */
 /* Bootstrap classes */
+.header_section .container-fluid {
+  padding-inline: 25px;
+}
+
 .navbar-nav {
   margin: 0 0 0 auto;
 }
