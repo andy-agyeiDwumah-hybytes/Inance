@@ -1,5 +1,6 @@
 // Components
 import About from "../../components/about/About";
+import Client from "../../components/client/Client";
 import Contact from "../../components/contact/Contact";
 import Feature from "../../components/feature/Feature";
 import Professional from "../../components/professional/Professional";
@@ -12,6 +13,7 @@ export default function Index() {
         <About />
         <Professional />
         <Services />
+        <Client />
         <Contact />
       </>
     );

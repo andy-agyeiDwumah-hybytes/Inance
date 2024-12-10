@@ -45,6 +45,10 @@ h2 {
   padding-bottom: 120px;
 }
 
+.layout_padding2-top {
+  padding-top: 45px;
+}
+
 .layout_padding-bottom {
   padding-bottom: 120px;
 }
@@ -237,6 +241,26 @@ img.about-img {
   transform: translateY(-50%);
 }
 
+/* OWL CAROUSEL */
+/* These classes come from owl carousel */
+.owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.owl-nav button {
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue);
+  outline: none;
+  margin: 0 20px;
+  color: var(--white);
+}
 /* MEDIA QUERIES */
 
 @media (max-width: 992px) {
