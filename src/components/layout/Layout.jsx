@@ -1,4 +1,4 @@
-// React router
+// React
 import { Outlet } from "react-router";
 // Components
 import Header from "../header/Header";

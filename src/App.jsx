@@ -8,7 +8,7 @@ import Services from "./components/services/Services"
 import Contact from "./components/contact/Contact"
 // Pages
 import Index from "./pages/index/Index"
-// Make JQueury available to entire Project
+// Make JQuery available to entire Project
 import * as $ from "jquery";
 
 const router = createBrowserRouter(

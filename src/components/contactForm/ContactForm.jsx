@@ -6,7 +6,7 @@ export default function ContactForm({ styles }) {
       </div>
       <div>
         <input
-          type="text"
+          type="tel"
           placeholder="Phone Number"
           className={styles.input}
           aria-label="Phone Number"

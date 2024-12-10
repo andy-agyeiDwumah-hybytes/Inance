@@ -18,7 +18,6 @@ html {
 }
 
 /* ALL */
-
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -243,7 +242,18 @@ img.about-img {
 
 /* OWL CAROUSEL */
 /* These classes come from owl carousel */
-.owl-nav {
+/* My ID: to overide styling of buttons and take advantage of css specificity */
+#clientCarousel .owl-nav button[type="button"],
+#clientCarousel .owl-nav button[type="button"] {
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue);
+  outline: none;
+  margin: 0 20px;
+  color: var(--white);
+}
+
+.client_section .owl-carousel .owl-nav  {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,15 +261,6 @@ img.about-img {
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 20px;
-}
-
-.owl-nav button {
-  width: 50px;
-  height: 50px;
-  background-color: var(--blue);
-  outline: none;
-  margin: 0 20px;
-  color: var(--white);
 }
 /* MEDIA QUERIES */
 

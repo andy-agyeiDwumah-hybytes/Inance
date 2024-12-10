@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function ClientInfo({ imgSrc, name, children, numOfStars, styles }) {
   const fontAwesomeIcons = [];
 
-  // Generate number of styles for client review
+  // Generate number of stars for client review
   for (let i = 0; i < numOfStars; i++) {
     fontAwesomeIcons.push(<FontAwesomeIcon icon={faStar} key={i} className={styles.icon} />);
   }
@@ -19,9 +19,11 @@ export default function ClientInfo({ imgSrc, name, children, numOfStars, styles 
           <div className={["client_detail", styles.clientDetail].join(" ")}>
             <div className="client_info">
               <h6 className={styles.h6}>{name}</h6>
-              {fontAwesomeIcons}
+              {fontAwesomeIcons.map(item => {
+                return item
+              })}
             </div>
-            <i className="fa fa-quote-left" aria-hidden="true"></i>
+            <FontAwesomeIcon icon={faQuoteLeft} />
           </div>
         </div>
         <div className={["client_text", styles.clientText].join(" ")}>

@@ -7,9 +7,6 @@ import clientTwoImg from "../../assets/client-2.jpg"
 import styles from "./Client.module.css"
 // Owl Carousel
 import ReactOwlCarousel from "react-owl-carousel";
-// Font Awesome
-// import { faLongArrowRight, faLongArrowLeft } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Client() {
     // Options for owl carousel
@@ -18,10 +15,12 @@ export default function Client() {
       margin: 10,
       nav: true,
       dots: false,
-    //   navText: [
-    //     <FontAwesomeIcon key="left" icon={faLongArrowLeft} />,
-    //     <FontAwesomeIcon key="right" icon={faLongArrowRight} />,
-    //   ],
+      navText: [
+        // Cannot use FontAwesome icons here because they cannot be directly
+        // converted into strings or HTML inside a template literal
+        `<span class="nav-button"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></span>`,
+        `<span class="nav-button"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>`,
+      ],
       autoplay: true,
       autoplayHoverPause: true,
       responsive: {
@@ -38,7 +37,10 @@ export default function Client() {
           <h2>What Our Clients Say</h2>
         </div>
         <div className="carousel-wrap layout_padding2-top">
-          <ReactOwlCarousel className="owl-carousel" {...options} >
+            {/* Use of id below is to override styling of prev and next buttons: see index.css */}
+          <ReactOwlCarousel className="owl-carousel" id="clientCarousel" {...options} >
+            {/* Duplicate to prevent disabled buttons */}
+            {/* Buttons become disabled when there are not enough items to cycle */}
             <ClientInfo imgSrc={clientOneImg} name="Jorch morik" numOfStars={5} styles={styles}>
               chunks as necessary, making this the first true generator on the
               Internet. It uses a dictionary of over 200 Latin words, combined
