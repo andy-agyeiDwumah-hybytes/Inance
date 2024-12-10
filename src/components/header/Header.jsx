@@ -13,6 +13,7 @@ import Slider from "../slider/Slider";
 
 export default function Header() {
   // Only show Slider component if current page is the index (home page)
+  // True by default
   const { pathname } = useLocation();
   const [currentPageIsIndex, setCurrentPageIsIndex] = useState(true);
 
