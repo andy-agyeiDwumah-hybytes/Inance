@@ -2,7 +2,14 @@ export default function ContactForm({ styles }) {
   return (
     <form action="">
       <div>
-        <input type="text" placeholder="Name" className={styles.input} aria-label="Name" id="name" />
+        <input
+          type="text"
+          placeholder="Name"
+          className={styles.input}
+          aria-label="Name"
+          id="name"
+          autoComplete="name"
+        />
       </div>
       <div>
         <input
@@ -11,10 +18,18 @@ export default function ContactForm({ styles }) {
           className={styles.input}
           aria-label="Phone Number"
           id="phone-number"
+          autoComplete="tel"
         />
       </div>
       <div>
-        <input type="email" placeholder="Email" className={styles.input} aria-label="Email" id="email" />
+        <input
+          type="email"
+          placeholder="Email"
+          className={styles.input}
+          aria-label="Email"
+          id="email"
+          autoComplete="email"
+        />
       </div>
       <div>
         <input

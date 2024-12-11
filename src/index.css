@@ -7,6 +7,7 @@
   --lightBlue: #d1e3ff;
 }
 
+/* RESETS */
 html {
   box-sizing: border-box;
 }
@@ -17,7 +18,7 @@ html {
   box-sizing: inherit;
 }
 
-/* ALL */
+/* GENERAL */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -183,7 +184,7 @@ h2 {
   transform: none;
 }
 
-/* ABOUT */
+/* ABOUT SECTION */
 /* Add styles here as it will be used in both 'about' and 'index' pages */
 div.about-row {
   align-items: center;
@@ -253,7 +254,7 @@ img.about-img {
 
 /* OWL CAROUSEL */
 /* These classes come from owl carousel */
-/* My ID: to overide styling of buttons and take advantage of css specificity */
+/* My ID: to overide styling of buttons and take advantage of CSS specificity */
 #clientCarousel .owl-nav button[type="button"],
 #clientCarousel .owl-nav button[type="button"] {
   width: 50px;
@@ -273,8 +274,8 @@ img.about-img {
   justify-content: center;
   margin-top: 20px;
 }
-/* MEDIA QUERIES */
 
+/* MEDIA QUERIES */
 @media (max-width: 992px) {
   .hero_area {
     height: auto;
@@ -347,12 +348,6 @@ img.about-img {
   .contact_section form {
     margin-bottom: 45px;
   }
-
-  /* .info_section .info_items::before {
-    width: 1px;
-    height: 90%;
-    top: 25px;
-  } */
 }
 
 @media (min-width: 1200px) {

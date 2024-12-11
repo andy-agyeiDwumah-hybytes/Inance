@@ -76,8 +76,15 @@ a.menuLinks {
 }
 
 /*  */
-
-/* Fontawesome icons */
 .headerIcon {
     color: var(--orange);
+}
+
+.emailIcon {
+    transform: translateY(1px);
+}
+
+.phoneIcon {
+    vertical-align: baseline;
+    font-size: 0.8rem;
 }

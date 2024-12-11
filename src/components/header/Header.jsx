@@ -31,17 +31,17 @@ export default function Header() {
         <div className={styles.top}>
           <div className="container-fluid">
             <div className={["contact_nav", styles.contactNav].join(" ")}>
-              <Link to="/">
+              <Link to="/" className={styles.topHeaderLinks}>
                 <FontAwesomeIcon
                   icon={faPhone}
-                  className={styles.headerIcon}
+                  className={[styles.headerIcon, styles.phoneIcon].join(" ")}
                 ></FontAwesomeIcon>
                 &nbsp;Call : +01 123455678990
               </Link>
-              <Link to="/">
+              <Link to="/" className={styles.topHeaderLinks}>
                 <FontAwesomeIcon
                   icon={faEnvelope}
-                  className={styles.headerIcon}
+                  className={[styles.headerIcon, styles.envelopeIcon].join(" ")}
                 ></FontAwesomeIcon>
                 &nbsp;Email : demo@gmail.com
               </Link>
