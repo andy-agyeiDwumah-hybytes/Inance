@@ -20,7 +20,7 @@ export default function About() {
   }, [pathname])
 
   return (
-    <section className={["about_section", layoutClassName].join(" ")} aria-labelledby="About">
+    <section className={["about_section", layoutClassName].join(" ")} aria-labelledby="about">
       <div className="container">
         <div className="row about-row">
           <div className="col-lg-5 col-md-6">
