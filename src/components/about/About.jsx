@@ -20,12 +20,12 @@ export default function About() {
   }, [pathname])
 
   return (
-    <section className={["about_section", layoutClassName].join(" ")}>
+    <section className={["about_section", layoutClassName].join(" ")} aria-labelledby="About">
       <div className="container">
         <div className="row about-row">
           <div className="col-lg-5 col-md-6">
             <div className="about-section-detail-box">
-              <h2 className="about-h2">About us</h2>
+              <h2 className="about-h2" id="about">About us</h2>
               <p className="about-para">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
@@ -34,12 +34,14 @@ export default function About() {
                 suffered alteration in some form, by injected humour, or
                 randomised
               </p>
-              <Link to="" className="about-link">Read More</Link>
+              <Link to="/" className="about-link">Read More</Link>
             </div>
           </div>
           <div className="col-lg-7 col-md-6">
             <div className="about-img-box">
-              <img src={aboutImg} alt="" className="about-img" />
+              {/* Provide alt text - important for unit testing / allows it to be accessible */}
+              {/* And will be read by Testing library */}
+              <img src={aboutImg} alt="about section image" className="about-img" />
             </div>
           </div>
         </div>

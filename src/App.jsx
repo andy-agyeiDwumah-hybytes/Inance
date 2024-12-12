@@ -7,7 +7,7 @@ import About from "./components/about/About"
 import Services from "./components/services/Services"
 import Contact from "./components/contact/Contact"
 // Pages
-import Index from "./pages/index/Index"
+import Index from "./pages/index"
 // Make JQuery available to entire Project
 import * as $ from "jquery";
 

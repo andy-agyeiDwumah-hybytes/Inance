@@ -1,4 +1,6 @@
+// React
 import { Link } from "react-router";
+// Styles
 import styles from "./Notfound.module.css"
 
 export default function Notfound() {

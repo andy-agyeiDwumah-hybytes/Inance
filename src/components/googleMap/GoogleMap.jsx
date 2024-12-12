@@ -1,5 +1,3 @@
-// Remove below installation
-// import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 // Google map
 // See https://visgl.github.io/react-google-maps/docs/get-started
 import { APIProvider, Map } from "@vis.gl/react-google-maps";

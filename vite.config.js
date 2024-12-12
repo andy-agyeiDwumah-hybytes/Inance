@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 // Inject JQuery into project
@@ -18,4 +19,10 @@ export default defineConfig({
       "window.jQuery": "jquery",
     }),
   ],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: "./setupTests.js",
+    css: true
+  }
 });
