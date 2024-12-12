@@ -6,3 +6,8 @@ import { vi } from "vitest";
 vi.mock("react-owl-carousel", () => ({
   default: ({ children }) => <div>{children}</div>,
 }));
+
+// Mock the component as it relies on external APIs
+vi.mock("./src/components/googleMap/GoogleMap.jsx", () => ({
+  default: () => <div data-testid="google-map">Mock Google Map</div>,
+}));

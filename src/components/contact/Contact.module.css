@@ -1,4 +1,4 @@
-input.input {
+input.input, textarea.messageBox {
     width: 100%;
     border: none;
     height: 50px;
@@ -9,7 +9,7 @@ input.input {
     color: var(--white);
     -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
-
+    
     &::-webkit-input-placeholder,
     &::-ms-input-placeholder,
     &::-ms-input-placeholder,
@@ -18,9 +18,13 @@ input.input {
     }
 }
 
-input.messageBox {
-    height: 135px;
+input.input {
+    height: 50px;
 }
+
+textarea.messageBox {
+    height: 135px;
+}    
 
 button.sendBtn {
     border: none;

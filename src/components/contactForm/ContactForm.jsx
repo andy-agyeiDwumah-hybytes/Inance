@@ -1,6 +1,7 @@
 export default function ContactForm({ styles }) {
   return (
-    <form action="">
+    // By default forms do not get this role
+    <form action="" role="form">
       <div>
         <input
           type="text"
@@ -8,6 +9,7 @@ export default function ContactForm({ styles }) {
           className={styles.input}
           aria-label="Name"
           id="name"
+          name="name"
           autoComplete="name"
         />
       </div>
@@ -19,6 +21,7 @@ export default function ContactForm({ styles }) {
           aria-label="Phone Number"
           id="phone-number"
           autoComplete="tel"
+          name="phone-number"
         />
       </div>
       <div>
@@ -29,19 +32,22 @@ export default function ContactForm({ styles }) {
           aria-label="Email"
           id="email"
           autoComplete="email"
+          name="email"
         />
       </div>
       <div>
-        <input
-          type="text"
-          className={[styles.input, styles.messageBox].join(" ")}
-          placeholder="Message"
-          aria-label="Message"
+        <textarea
+          name="message"
           id="message"
-        />
+          className={styles.messageBox}
+          placeholder="Message"
+          aria-label="message"
+        ></textarea>
       </div>
       <div className="d-flex ">
-        <button className={styles.sendBtn}>Send</button>
+        <button className={styles.sendBtn} type="submit">
+          Send
+        </button>
       </div>
     </form>
   );

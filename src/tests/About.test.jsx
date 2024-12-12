@@ -1,5 +1,7 @@
+// Testing
 import { test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
+// React
 import { MemoryRouter } from "react-router";
 // Components
 import About from "../components/about/About";

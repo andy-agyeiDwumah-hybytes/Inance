@@ -6,10 +6,13 @@ import styles from "./Contact.module.css"
 
 export default function Contact() {
   return (
-    <section className="contact_section layout_padding">
+    <section
+      className="contact_section layout_padding"
+      aria-labelledby="contact-us-heading"
+    >
       <div className="container">
         <div className="heading_container">
-          <h2>Contact Us</h2>
+          <h2 id="contact-us-heading">Contact Us</h2>
         </div>
         <div className="row">
           <div className="col-md-6">
