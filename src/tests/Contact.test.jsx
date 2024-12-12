@@ -1,11 +1,12 @@
-// Testing
-import { test, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
 // Components
 import Contact from "../components/contact/Contact";
 import ContactForm from "../components/contactForm/ContactForm";
-import styles from "../components/contact/Contact.module.css"
 import GoogleMap from "../components/googleMap/GoogleMap";
+// Styles
+import styles from "../components/contact/Contact.module.css"
+// Testing
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
 
 test("renders Contact component with correct elements", () => {
   render(
@@ -28,7 +29,7 @@ test("renders Contact component with correct elements", () => {
   expect(googleMap).toBeInTheDocument();
 });
 
-test("renders ContactForm with all input fields and button", () => {
+test("renders ContactForm with all form fields and button", () => {
   render(<ContactForm styles={styles} />);
 
   const nameInput = screen.getByLabelText(/name/i);
@@ -38,31 +39,40 @@ test("renders ContactForm with all input fields and button", () => {
   const sendButton = screen.getByRole("button", { name: /send/i });
 
   expect(nameInput).toBeInTheDocument();
+  expect(phoneInput).toBeInTheDocument();
+  expect(emailInput).toBeInTheDocument();
+  expect(messageInput).toBeInTheDocument();
+  expect(sendButton).toBeInTheDocument();
+  expect(sendButton).toHaveTextContent("Send")
+});
+
+test("renders form fields with correct attributes", () => {
+  render(<ContactForm styles={styles} />);
+
+  const nameInput = screen.getByLabelText(/name/i);
+  const phoneInput = screen.getByLabelText(/phone number/i);
+  const emailInput = screen.getByLabelText(/email/i);
+  const messageInput = screen.getByLabelText(/message/i);
+
   expect(nameInput).toHaveAttribute("id", "name");
   expect(nameInput).toHaveAttribute("name", "name");
   expect(nameInput).toHaveAttribute("placeholder", "Name");
   expect(nameInput).toHaveAttribute("autocomplete", "name");
 
-  expect(phoneInput).toBeInTheDocument();
   expect(phoneInput).toHaveAttribute("id", "phone-number");
   expect(phoneInput).toHaveAttribute("name", "phone-number");
   expect(phoneInput).toHaveAttribute("placeholder", "Phone Number");
   expect(phoneInput).toHaveAttribute("autocomplete", "tel");
 
-  expect(emailInput).toBeInTheDocument();
   expect(emailInput).toHaveAttribute("id", "email");
   expect(emailInput).toHaveAttribute("name", "email");
   expect(emailInput).toHaveAttribute("placeholder", "Email");
   expect(emailInput).toHaveAttribute("autocomplete", "email");
 
-  expect(messageInput).toBeInTheDocument();
   expect(messageInput).toHaveAttribute("id", "message");
   expect(messageInput).toHaveAttribute("name", "message");
   expect(messageInput).toHaveAttribute("placeholder", "Message");
-
-  expect(sendButton).toBeInTheDocument();
-  expect(sendButton).toHaveTextContent("Send")
-});
+})
 
 test("renders mocked GoogleMap component", () => {
     render(<GoogleMap styles={styles} />);

@@ -50,7 +50,10 @@ test("renders the about image with correct attributes", () => {
   const aboutImg = screen.getByRole("img");
   // use 'expectStringMatching' to get string value instead of complete path
   expect(aboutImg).toHaveAttribute("src", expect.stringMatching("about-img.jpg"));
-  expect(aboutImg).toHaveAttribute("alt", "about section image");
+  expect(aboutImg).toHaveAttribute(
+    "alt",
+    "Man wearing an apron with tools, pencils, and pens in their pocket"
+  );
   expect(aboutImg).toHaveAttribute("class", "about-img");
 });
 
