@@ -9,9 +9,9 @@ import { faPhone, faMapMarker, faEnvelope } from "@fortawesome/free-solid-svg-ic
 
 export default function GetInTouch() {
   return (
-    <section className={styles.infoSection}>
+    <section className={styles.infoSection} aria-labelledby="get-in-touch-heading">
       <div className="container">
-        <h4 className={styles.h4}>Get In Touch</h4>
+        <h4 id="get-in-touch-heading" className={styles.h4}>Get In Touch</h4>
         <div className="row">
           <div className="col-lg-10 mx-auto">
             <div className={styles.infoItems}>

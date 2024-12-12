@@ -14,7 +14,7 @@ export default function ClientInfo({ imgSrc, name, children, numOfStars, styles 
       <div className={["box", styles.box].join(" ")}>
         <div className={["client_id", styles.clientId].join(" ")}>
           <div className={["img-box", styles.imgBox].join(" ")}>
-            <img src={imgSrc} alt="" className={styles.img} />
+            <img src={imgSrc} alt="client headshot" className={styles.img} />
           </div>
           <div className={["client_detail", styles.clientDetail].join(" ")}>
             <div className="client_info">

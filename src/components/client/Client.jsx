@@ -31,10 +31,10 @@ export default function Client() {
     };
 
   return (
-    <section className="client_section">
+    <section className="client_section" aria-labelledby="clients-heading">
       <div className="container">
         <div className={["heading_container", "heading_center", styles.headingContainer].join(" ")}>
-          <h2>What Our Clients Say</h2>
+          <h2 id="clients-heading">What Our Clients Say</h2>
         </div>
         <div className="carousel-wrap layout_padding2-top">
             {/* Use of id below is to override styling of prev and next buttons: see index.css */}

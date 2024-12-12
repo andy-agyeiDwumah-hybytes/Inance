@@ -11,10 +11,10 @@ import { Link } from "react-router";
 
 export default function Services() {
   return (
-      <section className={["layout_padding", styles.section].join(" ")}>
-      <div className="container ">
+      <section className={["layout_padding", styles.section].join(" ")} aria-labelledby="services-heading">
+      <div className="container">
         <div className="heading_container heading_center">
-          <h2>Our Services</h2>
+          <h2 id="services-heading">Our Services</h2>
         </div>
         <div className="row">
           <Service heading="Maintenance" imgSrc={maintenanceImg} styles={styles}>
@@ -31,7 +31,7 @@ export default function Services() {
           </Service>
         </div>
         <div className={styles.btnBox}>
-          <Link to="" className={styles.btnBoxLink}>View More</Link>
+          <Link to="/" className={styles.btnBoxLink}>View More</Link>
         </div>
       </div>
     </section>
