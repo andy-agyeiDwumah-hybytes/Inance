@@ -2,7 +2,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router"
 // Components
 import Layout from "./components/layout/Layout"
-import Notfound from "./components/notfound/Notfound"
+import Notfound from "./pages/notfound/Notfound"
 import About from "./components/about/About"
 import Services from "./components/services/Services"
 import Contact from "./components/contact/Contact"
