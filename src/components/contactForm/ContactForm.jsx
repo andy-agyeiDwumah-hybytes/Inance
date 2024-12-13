@@ -1,7 +1,35 @@
+import { useRef } from "react";
+import { useState } from "react";
+
 export default function ContactForm({ styles }) {
+
+  const formRef = useRef()
+
+  const [name, setName] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const formData = new FormData(formRef.current)
+    const name = formData.get("name")
+    const phoneNumber = formData.get("phone-number")
+    const email = formData.get("email")
+    const message = formData.get("message")
+
+    console.log(`${name}\n${phoneNumber}\n${email}\n${message}`)
+    alert("Form was successfully submitted! Check the console.");
+  
+    setName("")
+    setPhoneNumber("")
+    setEmail("")
+    setMessage("")
+  }
+
   return (
     // By default forms do not get this role
-    <form action="" role="form">
+    <form role="form" onSubmit={handleSubmit} ref={formRef}>
       <div>
         <input
           type="text"
@@ -11,6 +39,9 @@ export default function ContactForm({ styles }) {
           id="name"
           name="name"
           autoComplete="name"
+          value={name}
+          onChange={e => setName(e.target.value)}
+          required
         />
       </div>
       <div>
@@ -22,6 +53,9 @@ export default function ContactForm({ styles }) {
           id="phone-number"
           autoComplete="tel"
           name="phone-number"
+          value={phoneNumber}
+          onChange={e => setPhoneNumber(e.target.value)}
+          required
         />
       </div>
       <div>
@@ -33,6 +67,9 @@ export default function ContactForm({ styles }) {
           id="email"
           autoComplete="email"
           name="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
         />
       </div>
       <div>
@@ -42,6 +79,9 @@ export default function ContactForm({ styles }) {
           className={styles.messageBox}
           placeholder="Message"
           aria-label="message"
+          value={message}
+          onChange={e => setMessage(e.target.value)}
+          required
         ></textarea>
       </div>
       <div className="d-flex ">

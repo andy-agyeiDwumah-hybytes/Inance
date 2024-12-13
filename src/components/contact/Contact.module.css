@@ -1,12 +1,12 @@
 input.input, textarea.messageBox {
     width: 100%;
     border: none;
-    height: 50px;
     margin-bottom: 25px;
     padding-left: 25px;
     background-color: var(--white);
     outline: none;
-    color: var(--white);
+    /* Change below to see text */
+    color: #737272;
     -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
     
@@ -14,7 +14,7 @@ input.input, textarea.messageBox {
     &::-ms-input-placeholder,
     &::-ms-input-placeholder,
     &::placeholder {
-        color: #737272;
+        color: currentColor;
     }
 }
 
@@ -23,7 +23,8 @@ input.input {
 }
 
 textarea.messageBox {
-    height: 135px;
+    /* height: 135px; */
+    padding-top: 3.5em;
 }    
 
 button.sendBtn {
