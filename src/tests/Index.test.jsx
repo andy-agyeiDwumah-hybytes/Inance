@@ -1,14 +1,27 @@
 // Components
 import App from "../App";
 import Header from "../components/header/Header";
+import Layout from "../components/layout/Layout";
+import About from "../components/about/About";
+import Services from "../components/services/Services";
+import Contact from "../components/contact/Contact";
 // Testing
 import { render, screen, within } from "@testing-library/react";
 import { expect, test } from "vitest";
 // React
-import { MemoryRouter } from "react-router";
+import {
+  createMemoryRouter,
+  createRoutesFromElements,
+  MemoryRouter,
+  Route,
+  RouterProvider,
+} from "react-router";
 // Styles
 import headerStyles from "../components/header/Header.module.css";
 import footerStyles from "../components/footer/Footer.module.css";
+// Pages
+import Notfound from "../pages/notfound/Notfound";
+import Index from "../pages/index";
 
 test("renders all landmarks", () => {
   render(<App />);
@@ -88,8 +101,22 @@ test("applies correct classnames to banner, navigation, and footer", () => {
   expect(footerSection).toHaveClass(footerStyles.footer);
 });
 
-test.skip("notFound component renders when pathname doesn't match any routes", () => {
+test("notFound component renders when pathname doesn't match any routes", () => {
+  const router = createMemoryRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />} errorElement={<Notfound />}>
+        <Route index element={<Index />} />
+        <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    ),
+    { initialEntries: ["/invalid-route"] }
+  );
 
+  render(<RouterProvider router={router} />);
+
+  // Get text from notFound component
   const pageNotFoundText = screen.getByText(/Page not found/i);
   expect(pageNotFoundText).toBeInTheDocument();
 });
