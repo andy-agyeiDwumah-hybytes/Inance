@@ -23,8 +23,8 @@ input.input {
 }
 
 textarea.messageBox {
-    /* height: 135px; */
     padding-top: 3.5em;
+    padding-bottom: 3em;
 }    
 
 button.sendBtn {

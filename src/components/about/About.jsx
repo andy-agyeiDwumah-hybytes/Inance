@@ -41,7 +41,10 @@ export default function About() {
             <div className="about-img-box">
               {/* Provide alt text - important for unit testing / allows it to be accessible */}
               {/* And will be read by Testing library */}
-              <img src={aboutImg} alt="Man wearing an apron with tools, pencils, and pens in their pocket" className="about-img" />
+              <img
+                src={aboutImg} alt="Man wearing an apron with tools, pencils, and pens in their pocket"
+                className="about-img"
+              />
             </div>
           </div>
         </div>

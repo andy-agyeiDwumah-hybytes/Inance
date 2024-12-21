@@ -137,7 +137,7 @@ h2 {
   transition: all .3s;
 }
 
-/* Remove default box shadow on button */
+/* Remove default box shadow on hamburger menu button */
 .navbar-toggler:focus, .navbar-toggler:focus-visible {
   box-shadow: none;
 }

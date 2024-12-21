@@ -3,7 +3,7 @@ import GetInTouchIcon from "../getInTouchIcon/GetInTouchIcon";
 import GetInTouchImg from "../getInTouchImg/GetInTouchImg";
 // Styles
 import styles from "./GetInTouch.module.css"
-// Fontawesome
+// Font awesome
 import { faFacebookF, faTwitter, faYoutube, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faMapMarker, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 

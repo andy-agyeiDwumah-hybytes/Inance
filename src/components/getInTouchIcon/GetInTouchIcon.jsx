@@ -1,4 +1,4 @@
-// Fontawesome
+// Font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // React
 import { Link } from "react-router";

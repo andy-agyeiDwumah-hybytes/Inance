@@ -6,7 +6,10 @@ const linkColour = "#0355cc";
 
 export default function Navigation({ styles }) {
   return (
-    <nav className={["navbar", "navbar-expand-lg", styles.nav].join(" ")}>
+    <nav
+      className={["navbar", "navbar-expand-lg", styles.nav].join(" ")}
+      aria-label="Primary"
+    >
       <Link to="/" className="navbar-brand">
         <span className={styles.inanceText}>Inance</span>
       </Link>
