@@ -18,7 +18,10 @@ export default function ContactForm({ styles }) {
     const email = formData.get("email")
     const message = formData.get("message")
 
-    console.log(`${name}\n${phoneNumber}\n${email}\n${message}`)
+    console.log(`Name: ${name} ` +
+      `\nPhone number: ${phoneNumber}` +
+      `\nEmail: ${email} ` +
+      `\nMessage: ${message}`) 
     alert("Form was successfully submitted! Check the console.");
   
     setName("")
