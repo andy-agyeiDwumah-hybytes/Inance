@@ -1,9 +1,6 @@
 // React
 import { Link, NavLink } from "react-router";
 
-// Must match index.css 'blue' colour
-const linkColour = "#0355cc";
-
 export default function Navigation({ styles }) {
   return (
     <nav
@@ -33,9 +30,6 @@ export default function Navigation({ styles }) {
             <NavLink
               to="/"
               className={[styles.menuLinks, "nav-link"].join(" ")}
-              style={({ isActive }) => ({
-                color: isActive ? linkColour : "",
-              })}
             >
               Home
             </NavLink>
@@ -44,9 +38,6 @@ export default function Navigation({ styles }) {
             <NavLink
               to="/about"
               className={[styles.menuLinks, "nav-link"].join(" ")}
-              style={({ isActive }) => ({
-                color: isActive ? linkColour : "",
-              })}
             >
               About
             </NavLink>
@@ -55,9 +46,6 @@ export default function Navigation({ styles }) {
             <NavLink
               to="/services"
               className={[styles.menuLinks, "nav-link"].join(" ")}
-              style={({ isActive }) => ({
-                color: isActive ? linkColour : "",
-              })}
             >
               Services
             </NavLink>
@@ -66,9 +54,6 @@ export default function Navigation({ styles }) {
             <NavLink
               to="contact"
               className={[styles.menuLinks, "nav-link"].join(" ")}
-              style={({ isActive }) => ({
-                color: isActive ? linkColour : "",
-              })}
             >
               Contact Us
             </NavLink>

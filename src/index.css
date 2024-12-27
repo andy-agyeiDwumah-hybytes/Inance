@@ -119,6 +119,11 @@ h2 {
   margin: 0 1em 0;
 }
 
+/* Highlight the current active link */
+.nav-item > .nav-link.active {
+  color: var(--blue);
+}
+
 .navbar-brand {
   padding: 0;
   margin: 0;
